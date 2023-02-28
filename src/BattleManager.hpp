@@ -15,7 +15,11 @@ namespace SokuLib
 {
 	struct BattleManager {
 		// 0x000
-		char unknown[0xC];
+		void* vtable;
+		// 0x004
+		int frameId; // starts at 0, counts up every frame.
+		// 0x008
+		int unknown;
 		// 0x00C
 		CharacterManager &leftCharacterManager;
 		// 0x010
